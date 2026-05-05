@@ -1,0 +1,34 @@
+# Dépendances
+node_modules/
+
+# Build
+dist/
+build/
+.next/
+.turbo/
+
+# Environnement
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# pnpm
+.pnpm-store/
