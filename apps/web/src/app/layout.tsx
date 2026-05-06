@@ -12,7 +12,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
+      <head>
+        <style>{`
+          *, *::before, *::after { box-sizing: border-box; }
+          body { margin: 0; padding: 0; background: #f9fafb; }
+        `}</style>
+      </head>
       <body>{children}</body>
     </html>
   );
 }
+

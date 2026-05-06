@@ -8,12 +8,21 @@
     "build": "nest build",
     "start": "node dist/main",
     "lint": "eslint \"{src,test}/**/*.ts\"",
-    "test": "jest"
+    "test": "jest",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@fastify/cors": "11.0.1",
     "@nestjs/common": "^11.0.0",
+    "@nestjs/config": "4.0.2",
     "@nestjs/core": "^11.0.0",
     "@nestjs/platform-fastify": "^11.0.0",
+    "@prisma/client": "6.7.0",
+    "dotenv": "16.5.0",
+    "luxon": "3.5.0",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
     "zod": "^3.24.0"
@@ -21,7 +30,9 @@
   "devDependencies": {
     "@nestjs/cli": "^11.0.0",
     "@nestjs/testing": "^11.0.0",
+    "@types/luxon": "3.4.2",
     "@types/node": "^22.0.0",
+    "prisma": "6.7.0",
     "typescript": "^5.7.0"
   }
 }

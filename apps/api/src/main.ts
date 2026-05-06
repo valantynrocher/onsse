@@ -10,6 +10,9 @@ async function bootstrap() {
     AppModule,
     new FastifyAdapter(),
   );
+  app.enableCors({
+    origin: process.env.WEB_ORIGIN ?? 'http://localhost:3000',
+  });
   await app.listen(3001, '0.0.0.0');
   console.log('API listening on http://localhost:3001');
 }
